@@ -1,0 +1,100 @@
+1、字符串定义
+    （1）什么是字符串
+        是任何编程语言中都非常重要的数据类型。是由引号包裹的任意字符组成的不可变序列，用于表示文本类型数据
+
+    （2）字符串定义
+        可以通过单引号/双引号/三引号来定义，用于表示文本信息
+
+    （3）转义字符
+        在字符串中用于表示一些特殊字符或序列，以及插入难以直接插入的字符
+        常见的转义字符，\n换行符、\t制表符、\''双引号、\'单引号、\\反斜杠
+
+    （4）字符串下标
+        默认从0开始
+
+
+2、字符串操作
+    （1）统计查找替换类方法
+        len() 用来获取字符串的字符个数
+        count() 返回str在string中出现的次数。  例子：count( str,start,end)
+        index() 检测sub是否包含在string中,检测下标。   例子：index(sub,start,end)  结果：若找不到抛出异常
+        rindex() 从右侧开始检测下标。  结果：找不到抛出异常
+        find()  查找首次出现字符的下标。 结果：找不到返回-1
+        replace() 替换字符串。 例子：replace(old,new)
+
+    （2）字符串判断类方法
+        startwith() 检查字符串是否是以某字符串开头，是返回True，否则返回False。  例子："https://www,baidu.com".startwith("https://")
+        endswith() 检查字符串是以某字符串结尾。 例子："https://www,baidu.com".endswith("https://")
+        isalpha() 判断字符串都是字母，则返回True，否则返回False。  例子："abc".isalpha()
+        isdigit(), 判断字符串都是数字，则返回True，否则返回False。 例子："123".isdigit()
+        isalnum() 判断字符串都是数字或字母，则返回True，否则返回False。 例子："123abc".isalnum()
+        isspace() 判断字符串中包含空格，则返回True，否则返回False。 ""、" "、"\t" 、"\n"、 "\r"是有效的 。例子：" aa ".isspace()
+        isupper(). 判断字符是否全是大写的
+        istitle() 判断单词首字母是否大写，是则返回True，否则返回False。 例子："Hello".istitle()
+
+    （3）字符串转换类方法
+        lower() 将字符串中的字母转成小写
+        upper()将字符串中的字母转成大写
+
+    （4）字符串对齐类方法
+        center() 字符串在指定宽度内居中显示。  例子："hello".center(20)
+        ljust() 字符串左对齐。  例子："hello".ljust(20)
+        rjust() 字符串右对齐。  例子："hello".rjust(20)
+
+    （5）字符串去除空白类方法
+        strip() 删除字符串左右两侧的空白字符串
+        lstrip() 删除字符串左边空白字符
+        rstrip() 删除字符串右边空白字符
+
+    （6）字符串分割类方法
+        split() 分割字符串
+        splitlines() 使用换行符\n分割字符串
+        partition() 从分割出现的第一个位置起，把字符串分成一个3元素的元组。 例子："this is hogwarts".partition("is")
+        rpartition() 从右向左分割出现的第一个位置起，把字符串分层一个3元素的元组
+
+    （7）字符串连接类方法
+        使用 “+”，拼接多个字符串
+        join()  例子："---".join(["a","b","c"])   可以添加字符、元组等
+
+    （8）编码解码类方法
+        encode() 使用encoding指定的字符集，对string进行编码，转成二进制字符串。 例子：encode(encoding)   encode("utf-8")
+        decode() 使用encoding指定的字符集，对string进行解码，转成字符串对象。   例子：decode(encoding)  decode("gbk")
+
+    （9）切片操作
+        对字符串按指定范围进行截取，得到一个字符串，指定范围时，起始下标必须小于结束下标且字符串不包含结束下标。 例子：str(start,end,step)
+
+3、字符串格式化
+    （1）什么是字符串格式化
+        将变量或常量值插入到字符串中的过程，以创建具有动态内容的字符串
+
+    （2）format()方法
+        使用占位符{}来表示要插入的变量或值，并通过传递参数来替换这些占位符
+        例子：
+            name="alice" 
+            age =25
+            message="my name is{},i am {} years old".format(name,age)
+            print(message)
+            
+    （3）f-string字符串（3.6版本以后引入的）
+        name="alice" 
+        age =25
+        msg=f"my name is{name},i am {old} years old"
+        print(msg)
+
+        greeting = f"{'hello' if age <30 else 'hi'}{name.upper}"
+        print(greeting)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
