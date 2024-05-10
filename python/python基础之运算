@@ -1,0 +1,17 @@
+1、成员运算
+  in和not in
+    in找到了返回True，未找到则False
+    print("k" in "hogwarts")
+
+2、身份运算
+  is、is not、is与==的区别
+    is是判断两个标识符是不是引用自一个对象
+    is是同一个地址，返回True，不是同一个则返回False
+    is是比较俩个对象都ID，相同返回True，不相同返回False。==是比较对象的值，相同返回True，不相同返回False。
+
+3、三目运算
+  三个操作数。on_true if [expression] else on_false
+    on_true 条件为真时的结果
+    on_false 条件为假时的结果
+    expression 判断条件
+  例子：print("yes" if True else "No")
