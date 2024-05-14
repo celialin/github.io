@@ -1,0 +1,17 @@
+1、循环嵌套特征
+    不局限于某种循环方式，可任意相互嵌套
+    外层循环循环一次，内层循环循环一轮
+
+2、使用
+    data = [[1,2,3,4,5,6,7,8,9],["A","B","C","D"],["hello","world","python","hogwarts"]]
+    for item in data:
+           for x in item:
+                 print(x,end="  ")
+           print()
+
+    99乘法表
+        i = 1
+        for i in range(1,10):
+              for j in range(1, i+1):
+                    print(i*j,end="")
+               print()
