@@ -1,0 +1,42 @@
+1、死循环
+    指循环条件恒等为真，会一直循环下去，不是一种错误语法，有效死循环可以解决很多问题。尽量避免死循环使用
+    在不确定循环次数的情况下，可以使用死循环来实现。比如web服务的监听处理客户端的请求连接，服务器并不知道会有多少客户端会连接，此时就可使用死循环实现
+    data = []
+    while True:
+           s = input("请输入一个数据：")
+           data.append(s)
+           print(data)
+
+2、break语句
+    无条件中止while和for-in循环
+    data = []
+    while True:
+           s = input("请输入一个数据：")
+           if s == "bye":
+                break
+           data.append(s)
+           print(data)
+
+3、continue语句
+    中止本次循环，而提前进入下一次循环中，未执行的代码不再执行
+    for i in range(1,10):
+        print("*"*10)
+        print("i=",i)
+        if i % 3==0:
+            continue
+        print("i*10= ",i*10)
+
+4、loop-else
+    （1）python中，除了if可以使用else，循环语句也可以使用else
+    （2）当一个循环没有被break中断而正常循环结束，就会执行else后的代码块
+        for i in range(4):
+               print(i)
+        else:
+               print("over")
+
+    （3）如果循环被断，则不会执行else后语句
+        for i in range(3):
+              if i ==1:
+                    break
+        else:
+               print("over")
