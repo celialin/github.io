@@ -1,0 +1,43 @@
+1、含义：
+    没有名字的函数称为匿名
+    （1）lambda可以应用在任何需要函数对象的地方
+    （2）语法上，匿名函数只能是单个表达式
+    （3）语义上，只是常规函数定义的语法
+
+2、表达式  
+    （1）
+        result = lambda[arg1[,arg2,......,argn]]:expression
+        result 是保存lambda表达式引用
+        [arg1,[,arg2,...,argn]] 可选制定要传参的参数列表
+        expression 必选 指定一个实现具体功能的表达式。如果有参数，那么在该表达式中将应用这些参数
+
+    （2）
+        add = lambda x,y:x+y
+        result = add(2,3)
+        
+        func = lambda x:x**2 if x>3 else x**3
+        print(func(3))
+
+3、使用场景
+    （1）需要一个函数，但又不想去命名函数
+    （2）通常在这个函数只使用一次的场景下
+    （3）可以指定短小的回调函数
+
+4、Sorted函数实现原理
+    例子：
+        （1）
+        students = [
+            {"name":"Eve","id":"10086","class":"class1"}
+            {"name":"Charlie","id":"10087","class":"class2"}
+            {"name":"Jack","id":"10088","class":"class3"}
+            {"name":"Rose","id":"10089","class":"class4"}
+        ]
+        
+        students.sort(key=lambda item:item["class"])
+        for item in students：
+            print(item)
+
+        （2）
+        newData=sorted(students,key=lambda x:x[“name”])
+        for item in newData:
+            print(item)
