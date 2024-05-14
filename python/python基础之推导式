@@ -1,0 +1,60 @@
+1、定义
+    推导式：是一种独特的数据处理方式，可以从一个数据序列构建另一个新的数据序列结构体
+
+2、元组推导式
+    （1）利用range区间、元组、列表、字典和集合等数据类型，快速生成一个满足指定需求的元组
+    （2）格式2种：
+        1、(out_exp_res for item in Sequence)
+        2、(out_exp_res for item in Sequence if conditional)
+        解释：
+        1、out_exp_res 生成元素表达式，可以说返回值的函数
+        2、for out_exp in Sequence 迭代sequence将out_exp传入到out_exp_res表达式中
+        3、if conditional 条件语句，可以过滤sequence中不符合条件的值
+
+    （3）简单推导式
+        t1 = (x for x in range(1,10))
+        
+        生成128位ascii码元组
+        t2 = (chr(x) for x in range(128))
+        
+        生成100以内的能被7整除所有数字的元组
+        t3 = (x for x in range(100) if x % 7 ==0)
+        
+        生成九九乘法表结果元组
+        t4 = (x*y for x in range(1,10) for y in range(1,x+1))
+        
+        遍历转大写
+        words = ["apple","banana","cherry"]
+        upper_words =(word.upper() for word in words)
+
+3、列表推导式
+    1、[out_exp_res for item in Sequence]
+    2、[out_exp_res for item in Sequence if conditional]
+    解释：
+    1、out_exp_res 生成元素表达式，可以说返回值的函数
+    2、for out_exp in Sequence 迭代sequence将out_exp传入到out_exp_res表达式中
+    3、if conditional 条件语句，可以过滤sequence中不符合条件的值
+
+4、字典推导式
+    键值对
+    1、{key_expr:value_expr for value in collection}
+    2、{key_expr:value_expr for value in collection if conditional}
+    
+    names = ['bob','tom','alice','jerry','wendy','smith']
+    newdict = (name:len(name) for name in names)
+    for k,v in newdict.items():
+           print(k,v)
+
+5、集合推导式
+    1、{expression for item in sequence}
+    2、{expression for item in sequence if conditional}
+    
+    data = ['bob','123','tom','abc123','alice','ss5f']
+    newset = {n for n in data if n.isdigit()}
+    for x in newset:
+          print(x)
+
+6、推导式优点
+    简洁高效，允许在一行代码中完成复杂的生成操作，避免了使用显示的循环和临时变量的繁琐过程，可以减少代码量，并提高编码效率
+    可读性好，将迭代、条件判断和表达式结合在一起，
+    灵活性强，推导式灵活，可根据添加条件判断、多个迭代变量和嵌套结构，以满足不同需求
